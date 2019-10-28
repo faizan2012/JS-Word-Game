@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .align {
+            text-align: center;
+        }
+
+        .border1 {
+            box-sizing: border-box;
+            width:1000px;
+            height:300px;
+            padding-top:30px;
+            padding-right:250px;
+            border:3px solid black;
+            background-color: lightblue;
+            text-align:center;
+            font-size:18px;
+            margin-left:450px;
+        }
+
+        .border2 {
+            padding:100px;
+            margin-bottom:500px;
+            position:absolute;
+            left:850px;
+            top:12px;
+        }
+        .button {
+            position:absolute;
+            top:300px;
+            left:900px;
+        }
+        .canvas {
+            background-color: lightblue;
+            box-sizing: border-box;
+            width:350px;
+            padding:15px;
+            height:290px;
+            border:3px dotted red;
+            margin-top: 100px;
+            margin-left:740px;
+            margin-bottom:400px;
+            font-size:25px;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+        }
+    </style>
+</head>
+<body>
+    <h1 class="align">WORD STORY</h1>
+    <div class="border1">
+        Boy's Name<br>
+        Girl's name<br>
+        Geological formation<br>
+        Verb<br>
+        Container<br>
+        Liquid<br>
+        body part<br>
+        ing verb<br>
+    </div>
+    <div class="canvas">
+        <p id="para"></p>
+    </div>
+    <div class="border2">
+        <form>
+            <input type="text" id="txt1"><br>
+            <input type="text" id="txt2"><br>
+            <input type="text" id="txt3"><br>
+            <input type="text" id="txt4"><br>
+            <input type="text" id="txt5"><br>
+            <input type="text" id="txt6"><br>
+            <input type="text" id="txt7"><br>
+            <input type="text" id="txt8"><br>
+        </form>
+    </div>
+    <button type="button" onclick="myFunction()" class="button">TRY IT</button>
+</body>
+    <script>
+        function myFunction() {
+            var boy = document.getElementById("txt1").value;
+            var girl = document.getElementById("txt2").value;
+            var geo = document.getElementById("txt3").value;
+            var verb = document.getElementById("txt4").value;
+            var container = document.getElementById("txt5").value;
+            var liquid = document.getElementById("txt6").value;
+            var bodyP = document.getElementById("txt7").value;
+            var ingV = document.getElementById("txt8").value;
+            var output = document.getElementById("para");
+            output.innerHTML = boy + ' and ' + girl + ' went up the ' +  geo  +  verb  + '   a   ' + container + '   of  ' + liquid   +   boy + '   fell down and hurt his   ' +   bodyP    + ' and  ' +   girl +  ' came  ' +  ingV   + ' after ';
+        }
+        </script>
+</html>
